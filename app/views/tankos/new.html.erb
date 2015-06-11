@@ -1,0 +1,40 @@
+<h1>New Tanko</h1>
+
+
+
+<%= form_for :tanko, url: tankos_path do |f| %>
+
+<% if @tanko.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@tanko.errors.count, "error") %> prohibited
+      </h2>
+      <ul>
+        <% @tanko.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :service_name %><br>
+    <%= f.text_field :service_name %>
+  </p>
+ 
+  <p>
+    <%= f.label :description%><br>
+    <%= f.text_area :description %>
+  </p>
+ 
+  <p>
+    <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+ <i class="glyphicon glyphicon-cloud"></i> Create New Tanko
+<% end %>
+  </p>
+<% end %>
+<p>
+<%= link_to tankos_path, class: "btn btn-default" do %>
+    <i class="glyphicon glyphicon-chevron-left"></i> Back
+<% end %>
+</p>
