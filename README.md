@@ -1,7 +1,7 @@
 Contanko
 ==============
 
-Powerfull and simple container managment system.
+Powerful, simple container managment system.
 
 Contanko provides a simple building block layout to design complex container services with HA built in. 
 
